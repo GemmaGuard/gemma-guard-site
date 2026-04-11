@@ -1,81 +1,22 @@
 const SITE_CONFIG = {
-  youtubeUrl: "https://youtu.be/i7s5aJ-T4ZY",
-  githubUrl: "https://github.com/GemmaGuard/gemma-guard-android",
   kaggleWriteupUrl: "YOUR_KAGGLE_WRITEUP_URL",
 };
 
-function getYouTubeEmbedUrl(url) {
-  if (!url || url.includes("YOUR_YOUTUBE_URL")) {
-    return null;
-  }
-
-  try {
-    const parsed = new URL(url);
-    let videoId = "";
-
-    if (parsed.hostname.includes("youtu.be")) {
-      videoId = parsed.pathname.replace("/", "");
-    } else if (parsed.searchParams.get("v")) {
-      videoId = parsed.searchParams.get("v");
-    } else if (parsed.pathname.includes("/embed/")) {
-      videoId = parsed.pathname.split("/embed/")[1];
-    }
-
-    if (!videoId) {
-      return null;
-    }
-
-    return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
-  } catch {
-    return null;
-  }
-}
-
 function applyExternalLinks() {
-  const githubLinks = document.querySelectorAll("[data-github-link]");
   const kaggleLinks = document.querySelectorAll("[data-kaggle-link]");
-  const isPlaceholder = !SITE_CONFIG.githubUrl || SITE_CONFIG.githubUrl.includes("YOUR_GITHUB_URL");
   const isKagglePlaceholder =
     !SITE_CONFIG.kaggleWriteupUrl ||
     SITE_CONFIG.kaggleWriteupUrl.includes("YOUR_KAGGLE_WRITEUP_URL");
 
-  githubLinks.forEach((link) => {
-    if (isPlaceholder) {
-      link.removeAttribute("href");
-      link.setAttribute("aria-disabled", "true");
-      link.classList.add("is-disabled");
-      link.title = "Replace YOUR_GITHUB_URL in script.js";
-      return;
-    }
-
-    link.setAttribute("href", SITE_CONFIG.githubUrl);
-  });
-
   kaggleLinks.forEach((link) => {
     if (isKagglePlaceholder) {
-      link.removeAttribute("href");
-      link.setAttribute("aria-disabled", "true");
+      link.hidden = true;
       link.classList.add("is-disabled");
-      link.title = "Replace YOUR_KAGGLE_WRITEUP_URL in script.js";
       return;
     }
 
     link.setAttribute("href", SITE_CONFIG.kaggleWriteupUrl);
   });
-}
-
-function applyVideoEmbed() {
-  const iframe = document.querySelector("[data-video-iframe]");
-  const placeholder = document.querySelector("[data-video-placeholder]");
-  const embedUrl = getYouTubeEmbedUrl(SITE_CONFIG.youtubeUrl);
-
-  if (!iframe || !placeholder || !embedUrl) {
-    return;
-  }
-
-  iframe.src = embedUrl;
-  iframe.hidden = false;
-  placeholder.hidden = true;
 }
 
 function setupMobileMenu() {
@@ -109,7 +50,7 @@ function setupMobileMenu() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 840) {
+    if (window.innerWidth > 980) {
       closeMenu();
     }
   });
@@ -134,8 +75,6 @@ function setupScreenshotGalleryMotion() {
   let frameId = null;
   let direction = 1;
   let pausedUntil = 0;
-  let resumeTimeout = null;
-
   const updateStripState = () => {
     const maxScroll = gallery.scrollWidth - gallery.clientWidth;
     const overflowing = maxScroll > 8;
@@ -192,11 +131,6 @@ function setupScreenshotGalleryMotion() {
   };
 
   const resume = () => {
-    if (resumeTimeout) {
-      clearTimeout(resumeTimeout);
-      resumeTimeout = null;
-    }
-
     stop();
     pausedUntil = performance.now() + 1200;
     updateStripState();
@@ -216,7 +150,6 @@ function setupScreenshotGalleryMotion() {
 }
 
 applyExternalLinks();
-applyVideoEmbed();
 setupMobileMenu();
 applyCurrentYear();
 setupScreenshotGalleryMotion();

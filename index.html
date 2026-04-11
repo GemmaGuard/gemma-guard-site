@@ -3,30 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gemma Guard — Stop phishing before you tap</title>
+    <title>Gemma Guard — Android phishing detection with on-device Gemma 4</title>
     <meta
       name="description"
-      content="Gemma Guard is an Android app that detects phishing attempts fully on-device using Gemma 4. No cloud. No data upload. Clear warnings, explainable results, and simple sharing."
+      content="Gemma Guard is an Android app that captures the current screen, runs OCR, and uses Gemma 4 on-device to spot phishing before users tap. Private by design, explainable, and built for the Google Gemma 4 Good Hackathon."
     />
     <meta name="theme-color" content="#0b6768" />
     <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://gemmaguard.org/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Gemma Guard — Stop phishing before you tap" />
+    <meta property="og:site_name" content="Gemma Guard" />
+    <meta property="og:title" content="Gemma Guard — Android phishing detection with on-device Gemma 4" />
     <meta
       property="og:description"
-      content="On-device phishing protection powered by Gemma 4. No cloud. No data upload. Clear verdicts, explainable results, and sharing for trusted contacts."
+      content="An Android phishing-defense app that uses Gemma 4 locally on the device to analyze the current screen, explain risk, and recommend the safest next step."
     />
-    <meta property="og:image" content="assets/og-image.jpg" />
-    <meta property="og:url" content="https://gemmaguard.org" />
+    <meta property="og:image" content="https://gemmaguard.org/assets/og-image.jpg" />
+    <meta property="og:image:alt" content="Gemma Guard Android phishing detection demo preview" />
+    <meta property="og:url" content="https://gemmaguard.org/" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Gemma Guard — Stop phishing before you tap" />
+    <meta name="twitter:title" content="Gemma Guard — Android phishing detection with on-device Gemma 4" />
     <meta
       name="twitter:description"
-      content="Gemma Guard detects phishing attempts fully on-device using Gemma 4. No cloud. No data upload. Private by design."
+      content="Gemma Guard captures the current screen, runs OCR, and uses Gemma 4 locally to flag phishing attempts before users tap."
     />
-    <meta name="twitter:image" content="assets/og-image.jpg" />
+    <meta name="twitter:image" content="https://gemmaguard.org/assets/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Gemma Guard Android phishing detection demo preview" />
 
     <link rel="icon" href="assets/favicon-gemma.ico" sizes="any" />
     <link rel="preload" as="image" href="assets/gemma-guard-logo-removebg.png" />
@@ -70,12 +74,13 @@
         </button>
 
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="#story">Story</a>
           <a href="#how-it-works">How it works</a>
+          <a href="#why-gemma">Why Gemma</a>
           <a href="#difference">Why it’s different</a>
+          <a href="#use-cases">Use cases</a>
           <a href="#screenshots">Screens</a>
-          <a href="#features">Highlights</a>
-          <a href="#hackathon">Hackathon</a>
+          <a href="#features">Tech</a>
+          <a href="#faq">FAQ</a>
           <a class="nav-link-cta" href="#demo">Watch demo</a>
         </nav>
       </div>
@@ -87,68 +92,61 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <div class="eyebrow-row">
-              <span class="eyebrow-badge">Powered by Gemma 4</span>
+              <span class="eyebrow-badge">Google Gemma 4 Good Hackathon</span>
               <span class="eyebrow-badge">Android app</span>
-              <span class="eyebrow-badge">On-device AI</span>
+              <span class="eyebrow-badge">Fully on-device</span>
             </div>
 
-            <h1>Stop phishing. Before you tap.</h1>
+            <h1>Gemma Guard is an Android app that spots phishing before you tap.</h1>
             <p class="hero-subheadline">
-              On-device phishing protection powered by Gemma 4. Gemma Guard reads the
-              screen, extracts text, analyzes image and OCR locally, and gives a clear
-              verdict without sending private data to the cloud.
+              It captures the current screen, extracts visible text, and uses Gemma 4
+              locally to judge suspicious messages, login pages, and payment prompts. The
+              result is a clear verdict, confidence score, reasons, and next-step guidance
+              designed for everyday users and families.
             </p>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#demo">Watch demo</a>
               <a
                 class="button button-secondary"
-                href="YOUR_GITHUB_URL"
+                href="https://github.com/GemmaGuard/gemma-guard-android"
                 target="_blank"
-                rel="noreferrer"
-                data-github-link
+                rel="noopener noreferrer"
               >
-                View on GitHub
+                View Android repo
               </a>
             </div>
+            <p class="hero-note">
+              Built for people who want a fast second opinion before tapping something risky.
+            </p>
 
             <ul class="proof-points" aria-label="Key product points">
-              <li>No cloud</li>
-              <li>No data upload</li>
-              <li>Explainable results</li>
-              <li>Built for everyone</li>
+              <li>Screenshot + OCR + Gemma 4</li>
+              <li>Private on-device analysis</li>
+              <li>Confidence, reasons, and action</li>
+              <li>Shareable with trusted contacts</li>
             </ul>
           </div>
 
           <div class="hero-media" id="demo">
             <div class="video-shell">
               <div class="video-meta">
-                <p class="video-label">Live product demo</p>
+                <p class="video-label">Product demo</p>
                 <p class="video-caption">
-                  Watch Gemma Guard capture the screen, reason locally, and explain what
-                  to do next.
+                  See the full flow: screen capture, OCR, Gemma reasoning, verdict, and
+                  user-friendly guidance.
                 </p>
               </div>
 
-              <div class="video-frame" data-video-shell>
+              <div class="video-frame">
                 <iframe
+                  src="https://www.youtube-nocookie.com/embed/i7s5aJ-T4ZY?rel=0&amp;modestbranding=1"
                   title="Gemma Guard YouTube demo"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                   referrerpolicy="strict-origin-when-cross-origin"
-                  hidden
-                  data-video-iframe
                 ></iframe>
-
-                <div class="video-placeholder" data-video-placeholder>
-                  <span class="placeholder-pill">Demo placeholder</span>
-                  <h2>Drop in your YouTube demo link</h2>
-                  <p>
-                    Replace <code>YOUR_YOUTUBE_URL</code> in
-                    <code>script.js</code> to embed the real product demo here.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -158,8 +156,8 @@
       <section class="story-section section-pad" id="story">
         <div class="container two-column">
           <div class="section-heading">
-            <span class="section-label">The human reason</span>
-            <h2>Built for people who should never have to decode a scam alone.</h2>
+            <span class="section-label">Why this exists</span>
+            <h2>Phishing succeeds because it shows up in ordinary phone moments.</h2>
           </div>
           <div class="story-card">
             <p>
@@ -179,10 +177,10 @@
         <div class="container">
           <div class="section-heading section-heading-wide">
             <span class="section-label">How it works</span>
-            <h2>A simple flow that feels clear in stressful moments.</h2>
+            <h2>A short, understandable flow for high-stress moments.</h2>
             <p>
-              Gemma Guard keeps the experience short, direct, and understandable even for
-              people who are not technical.
+              The app is designed to answer one question quickly: is this screen safe to
+              trust right now?
             </p>
           </div>
 
@@ -196,7 +194,7 @@
                 </svg>
               </div>
               <h3>Capture the screen</h3>
-              <p>Take the current screen exactly as the user sees it.</p>
+              <p>Grab the current Android screen exactly as the user sees it.</p>
             </li>
             <li class="step-card">
               <div class="step-icon" aria-hidden="true">
@@ -206,7 +204,7 @@
                 </svg>
               </div>
               <h3>Extract the visible text</h3>
-              <p>OCR pulls out the important words, links, and urgency cues.</p>
+              <p>OCR pulls out the visible wording, links, brands, and urgency cues.</p>
             </li>
             <li class="step-card">
               <div class="step-icon" aria-hidden="true">
@@ -216,7 +214,7 @@
                 </svg>
               </div>
               <h3>Analyze image + text on-device</h3>
-              <p>Gemma 4 evaluates both the screenshot and the extracted text locally.</p>
+              <p>Gemma 4 evaluates the screenshot and OCR text together on the device.</p>
             </li>
             <li class="step-card">
               <div class="step-icon" aria-hidden="true">
@@ -226,9 +224,46 @@
                 </svg>
               </div>
               <h3>Get a clear verdict</h3>
-              <p>See risk level, confidence, reasons, and the next safest action to take.</p>
+              <p>Show verdict, confidence, reasons, and the safest next action to take.</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="section-pad" id="why-gemma">
+        <div class="container">
+          <div class="section-heading section-heading-wide">
+            <span class="section-label">Why Gemma</span>
+            <h2>Gemma 4 is central to the product, not just mentioned in the stack.</h2>
+            <p>
+              Gemma Guard uses Gemma because phishing screens are visual, contextual, and
+              often written to pressure people into fast decisions.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="feature-card feature-card-emphasis">
+              <h3>Multimodal fit</h3>
+              <p>
+                The app needs a model that can reason over both the screenshot and the
+                extracted text, not just one or the other.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Edge-friendly deployment</h3>
+              <p>
+                Gemma 4 is a strong fit for local-first Android experiences where privacy,
+                latency, and offline behavior matter.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Plain-language output</h3>
+              <p>
+                The goal is not only classification. It is to turn model output into
+                understandable reasons and a clear recommendation.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -236,10 +271,10 @@
         <div class="container">
           <div class="section-heading section-heading-wide">
             <span class="section-label">Why it’s different</span>
-            <h2>Designed around privacy, clarity, and real-world trust.</h2>
+            <h2>Built around the actual decisions users face on a phone.</h2>
             <p>
-              Gemma Guard is not just another warning screen. It explains what it sees and
-              keeps the analysis on the phone.
+              Gemma Guard is not a generic warning banner. It gives context, explains risk,
+              and keeps the core workflow local.
             </p>
           </div>
 
@@ -274,12 +309,40 @@
         </div>
       </section>
 
+      <section class="section-pad" id="use-cases">
+        <div class="container">
+          <div class="section-heading section-heading-wide">
+            <span class="section-label">Use cases</span>
+            <h2>Made for the kinds of screens that trick people in seconds.</h2>
+          </div>
+
+          <div class="use-cases-grid">
+            <article class="highlight-card">
+              <h3>Fake banking or payment prompts</h3>
+              <p>Urgent money requests, payment confirmations, and bank warnings.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Account lock or password reset screens</h3>
+              <p>Pages that push users to log in quickly before they stop to verify.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Delivery, refund, or package scams</h3>
+              <p>Everyday messages that look harmless enough to tap without thinking.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Family safety check-ins</h3>
+              <p>Results can be shared with a trusted contact when a second opinion helps.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section-pad" id="screenshots">
         <div class="container">
           <div class="section-heading section-heading-wide">
             <span class="section-label">Product screenshots</span>
             <h2>The experience stays visual, readable, and calm.</h2>
-            <p>A quick look at the app in action.</p>
+            <p>These screens show the product as a real Android workflow, not a concept mockup.</p>
           </div>
 
           <div class="gallery-strip" data-gallery-strip>
@@ -332,30 +395,30 @@
       <section class="section-pad highlights-section" id="features">
         <div class="container">
           <div class="section-heading section-heading-wide">
-            <span class="section-label">Feature highlights</span>
-            <h2>Demo-friendly details that make the product feel real.</h2>
+            <span class="section-label">Technical highlights</span>
+            <h2>Concrete implementation details that make the demo credible.</h2>
           </div>
 
           <div class="highlights-grid">
             <article class="highlight-card">
-              <h3>On-device analysis</h3>
-              <p>Private by design, with no server dependency for the core detection flow.</p>
+              <h3>Screen capture + OCR pipeline</h3>
+              <p>The app starts from the live screen instead of asking users to copy content manually.</p>
             </article>
             <article class="highlight-card">
-              <h3>Explainable results</h3>
-              <p>Each verdict includes confidence, reasons, and a recommended action.</p>
+              <h3>Screenshot and OCR fed together</h3>
+              <p>Gemma gets both the visual layout and the extracted text for better context.</p>
             </article>
             <article class="highlight-card">
-              <h3>Multilingual and localized output</h3>
-              <p>Useful for households that need clear answers in familiar language.</p>
+              <h3>Structured verdict output</h3>
+              <p>The result is translated into verdict, confidence, reasons, and recommended action.</p>
             </article>
             <article class="highlight-card">
-              <h3>Share result flow</h3>
-              <p>Send the result to family or trusted contacts in one simple step.</p>
+              <h3>Local-first user experience</h3>
+              <p>The core phishing check is designed to stay on-device for privacy and trust.</p>
             </article>
             <article class="highlight-card">
-              <h3>Scan history</h3>
-              <p>Revisit past checks and keep context when a suspicious message returns.</p>
+              <h3>Designed for non-technical users</h3>
+              <p>The hard part is not only detection. It is turning the answer into language people can act on.</p>
             </article>
           </div>
         </div>
@@ -365,23 +428,63 @@
         <div class="container secondary-panel">
           <div>
             <span class="section-label">Built for the Google Gemma 4 Good Hackathon</span>
-            <h2>A focused Android demo built to show practical, private AI protection.</h2>
+            <h2>A focused submission that shows a complete product loop, not just a model demo.</h2>
           </div>
           <div class="hackathon-copy">
             <p>
               Gemma Guard was built for the Google Gemma 4 Good Hackathon as a
-              privacy-first Android app that shows how on-device AI can help people spot
-              phishing before they act. The Kaggle write-up adds the full project context.
+              privacy-first Android app that shows how Gemma can be used in a real mobile
+              safety workflow: capture a risky screen, reason locally, explain the result,
+              and help the user act safely.
             </p>
-            <a
-              class="button button-secondary"
-              href="YOUR_KAGGLE_WRITEUP_URL"
-              target="_blank"
-              rel="noreferrer"
-              data-kaggle-link
-            >
+            <ul class="hackathon-points">
+              <li>Solves a real consumer phishing problem with a clear audience.</li>
+              <li>Uses Gemma 4 in a visible, product-critical way.</li>
+              <li>Connects model output to a simple Android UX for everyday users.</li>
+            </ul>
+            <a class="button button-secondary" target="_blank" rel="noopener noreferrer" data-kaggle-link>
               Read Kaggle write-up
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad faq-section" id="faq">
+        <div class="container">
+          <div class="section-heading section-heading-wide">
+            <span class="section-label">FAQ</span>
+            <h2>Fast answers for judges and first-time visitors.</h2>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item">
+              <summary>What exactly does Gemma Guard do?</summary>
+              <p>
+                It captures the current Android screen, extracts visible text with OCR, and
+                uses Gemma 4 locally to determine whether the content looks like phishing.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Why use Gemma instead of simple keyword rules?</summary>
+              <p>
+                Phishing is often about context and visual deception. Gemma helps the app
+                reason over the layout, wording, and overall screen together.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Does the screen get uploaded anywhere?</summary>
+              <p>
+                The core experience is designed to run on-device, so private messages and
+                sensitive screens do not need to leave the phone for analysis.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Who is this built for?</summary>
+              <p>
+                Everyday Android users, including older adults and families, who want a
+                quick second opinion before tapping a suspicious screen.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -390,22 +493,21 @@
         <div class="container final-cta-card">
           <div>
             <span class="section-label">See it in action</span>
-            <h2>Watch the demo. Explore the code. Share the idea.</h2>
+            <h2>Watch the demo and inspect the Android build.</h2>
             <p>
-              A fast explanation, a real product flow, and a clear privacy story all in one
-              place.
+              The fastest way to evaluate Gemma Guard is to watch the product flow, then
+              look at the Android implementation behind it.
             </p>
           </div>
           <div class="final-cta-actions">
             <a class="button button-primary" href="#demo">Watch demo</a>
             <a
               class="button button-secondary"
-              href="YOUR_GITHUB_URL"
+              href="https://github.com/GemmaGuard/gemma-guard-android"
               target="_blank"
-              rel="noreferrer"
-              data-github-link
+              rel="noopener noreferrer"
             >
-              View GitHub repo
+              View Android repo
             </a>
           </div>
         </div>
@@ -417,26 +519,21 @@
         <div>
           <p class="footer-brand">Gemma Guard</p>
           <p class="footer-copy">
-            Stop phishing before you tap. Built with Gemma 4 for a privacy-first Android
-            experience.
+            Android phishing detection powered by on-device Gemma 4, built for the Google
+            Gemma 4 Good Hackathon.
           </p>
         </div>
         <div class="footer-links">
           <a href="#demo">Watch demo</a>
-          <a href="YOUR_GITHUB_URL" target="_blank" rel="noreferrer" data-github-link>
-            GitHub
+          <a href="https://github.com/GemmaGuard/gemma-guard-android" target="_blank" rel="noopener noreferrer">
+            Android repo
           </a>
-          <a
-            href="YOUR_KAGGLE_WRITEUP_URL"
-            target="_blank"
-            rel="noreferrer"
-            data-kaggle-link
-          >
+          <a target="_blank" rel="noopener noreferrer" data-kaggle-link>
             Kaggle write-up
           </a>
         </div>
         <p class="footer-note">
-          Built for the Google Gemma 4 Good Hackathon. <span id="current-year"></span>
+          Real screenshots. Real demo. On-device analysis. <span id="current-year"></span>
         </p>
       </div>
     </footer>

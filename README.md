@@ -12,16 +12,13 @@ Static marketing/demo site for **Gemma Guard**, built with plain HTML, CSS, and 
 ├── README.md
 └── assets
     ├── favicon-gemma.ico
-    ├── favicon.svg
     ├── gemma-guard-logo-removebg.png
-    ├── logo.svg
     ├── og-image.jpg
-    ├── og-image.svg
     └── screenshots
-        ├── details-screen.svg
-        ├── main-screen.svg
-        ├── share-preview.svg
-        └── warning-result.svg
+        ├── details-screen.webp
+        ├── main-screen.webp
+        ├── share-preview.webp
+        └── warning-result.webp
 ```
 
 ## Run locally
@@ -42,22 +39,18 @@ You can also open `index.html` in a browser, but a local server is recommended f
 
 ## Replace your real content
 
-### 1. Video URL and GitHub URL
+### 1. Links
 
 Edit [`script.js`](/Users/pavel/dev/gemma-guard-site/script.js):
 
 ```js
 const SITE_CONFIG = {
-  youtubeUrl: "YOUR_YOUTUBE_URL",
-  githubUrl: "YOUR_GITHUB_URL",
   kaggleWriteupUrl: "YOUR_KAGGLE_WRITEUP_URL",
 };
 ```
 
-Use a normal YouTube watch URL or short `youtu.be` URL.
-
-Use the Kaggle write-up URL for the project write-up link. The site copy keeps the
-main hackathon attribution as the Google Gemma 4 Good Hackathon.
+The demo video and GitHub repo are already wired into [`index.html`](/Users/pavel/dev/gemma-guard-site/index.html).
+Add the Kaggle write-up URL in [`script.js`](/Users/pavel/dev/gemma-guard-site/script.js) when it is ready.
 
 ### 2. Logo
 
@@ -92,20 +85,10 @@ The site currently uses [`assets/favicon-gemma.ico`](/Users/pavel/dev/gemma-guar
 
 ## Content checklist
 
-These are the main items you still need to add and exactly where they go:
+These are the main items you may still want to update:
 
-- `YOUR_YOUTUBE_URL` in [`script.js`](/Users/pavel/dev/gemma-guard-site/script.js)
-- `YOUR_GITHUB_URL` in [`script.js`](/Users/pavel/dev/gemma-guard-site/script.js)
 - `YOUR_KAGGLE_WRITEUP_URL` in [`script.js`](/Users/pavel/dev/gemma-guard-site/script.js)
-- `YOUR_SITE_URL` in the Open Graph metadata in [`index.html`](/Users/pavel/dev/gemma-guard-site/index.html)
-- Final logo file currently used by the site: [`assets/gemma-guard-logo-removebg.png`](/Users/pavel/dev/gemma-guard-site/assets/gemma-guard-logo-removebg.png)
-- Final favicon currently used by the site: [`assets/favicon-gemma.ico`](/Users/pavel/dev/gemma-guard-site/assets/favicon-gemma.ico)
-- Final social share image currently used by the site: [`assets/og-image.jpg`](/Users/pavel/dev/gemma-guard-site/assets/og-image.jpg)
-- Main app screenshot currently used by the site: [`assets/screenshots/main-screen.webp`](/Users/pavel/dev/gemma-guard-site/assets/screenshots/main-screen.webp)
-- Warning result screenshot currently used by the site: [`assets/screenshots/warning-result.webp`](/Users/pavel/dev/gemma-guard-site/assets/screenshots/warning-result.webp)
-- Details screen screenshot currently used by the site: [`assets/screenshots/details-screen.webp`](/Users/pavel/dev/gemma-guard-site/assets/screenshots/details-screen.webp)
-- Share preview screenshot currently used by the site: [`assets/screenshots/share-preview.webp`](/Users/pavel/dev/gemma-guard-site/assets/screenshots/share-preview.webp)
-- Any final copy tweaks in [`index.html`](/Users/pavel/dev/gemma-guard-site/index.html) if you want to refine wording before launch
+- Any final copy tweaks in [`index.html`](/Users/pavel/dev/gemma-guard-site/index.html)
 
 ## Deploy to GitHub Pages
 
