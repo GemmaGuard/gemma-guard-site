@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Gemma Guard</title>
+    <meta
+      name="description"
+      content="Gemma Guard privacy policy. The app analyzes screenshots for phishing entirely on your phone. No accounts, no telemetry, no analytics."
+    />
+    <meta name="theme-color" content="#0b6768" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://gemmaguard.org/privacy.html" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Gemma Guard" />
+    <meta property="og:title" content="Privacy Policy — Gemma Guard" />
+    <meta
+      property="og:description"
+      content="Gemma Guard analyzes screenshots for phishing entirely on your phone. No data collection, no telemetry."
+    />
+    <meta property="og:url" content="https://gemmaguard.org/privacy.html" />
+
+    <link rel="icon" href="assets/favicon-gemma.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .legal-page {
+        padding: clamp(3rem, 6vw, 5rem) 0;
+      }
+      .legal-page .container {
+        max-width: 760px;
+      }
+      .legal-page h1 {
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        margin: 0.5rem 0 1rem;
+      }
+      .legal-page .updated {
+        color: var(--muted, #5b6b6b);
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      .legal-page h2 {
+        margin-top: 2.25rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.35rem;
+      }
+      .legal-page p,
+      .legal-page li {
+        line-height: 1.65;
+        color: var(--text, #1a2a2a);
+      }
+      .legal-page ul {
+        padding-left: 1.25rem;
+        margin: 0.5rem 0 1rem;
+      }
+      .legal-page li + li {
+        margin-top: 0.4rem;
+      }
+      .legal-page a {
+        color: var(--brand, #0b6768);
+      }
+      .legal-page code {
+        background: rgba(11, 103, 104, 0.08);
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Gemma Guard home">
+          <img
+            class="brand-mark"
+            src="assets/gemma-guard-logo-removebg.png"
+            alt="Gemma Guard logo"
+            width="48"
+            height="48"
+          />
+          <span class="brand-text">
+            <strong>Gemma Guard</strong>
+            <span>Private by design</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="legal-page">
+      <div class="container">
+        <span class="section-label">Legal</span>
+        <h1>Gemma Guard — Privacy Policy</h1>
+        <p class="updated"><strong>Last updated:</strong> 2026-05-14</p>
+
+        <h2>Scope</h2>
+        <p>
+          This privacy policy applies to the <strong>Gemma Guard</strong>
+          Android application distributed through the Google Play Store
+          (package <code>org.gemmaguard.android</code>), published by
+          <strong>Pavel Kerbel</strong>.
+        </p>
+        <p>
+          A separate open-source reference implementation is published at
+          <a href="https://github.com/GemmaGuard/gemma-guard-android" target="_blank" rel="noopener noreferrer">github.com/GemmaGuard/gemma-guard-android</a>
+          for the Google Gemma 4 Good Hackathon. That source repository is
+          provided for transparency and review only and is <strong>not</strong>
+          covered by this policy. If you build the app yourself from source or
+          install it from any channel other than the Google Play Store, you
+          are responsible for its data handling and this policy does not
+          apply.
+        </p>
+
+        <h2>Summary</h2>
+        <p>
+          Gemma Guard analyzes screenshots for phishing
+          <strong>entirely on your phone</strong>. We do not collect, store, or
+          transmit your personal data or any content you scan. There is no
+          account, no telemetry, and no analytics.
+        </p>
+
+        <h2>What we collect</h2>
+        <p>
+          <strong>Nothing.</strong> Gemma Guard does not transmit screenshots,
+          extracted text, scan results, device identifiers, IP addresses, or
+          any other personal information to us or any third party.
+        </p>
+
+        <h2>Permissions and why each is needed</h2>
+        <ul>
+          <li>
+            <strong>Display over other apps:</strong> Required to render the
+            floating capture button that lets you trigger a scan from any app.
+            The button only appears while a capture session is active.
+          </li>
+          <li>
+            <strong>Screen capture (MediaProjection):</strong> Required to take
+            a single screenshot when you tap the capture button. The screenshot
+            is held briefly in app memory and a temporary cache file, both
+            deleted after analysis completes.
+          </li>
+          <li>
+            <strong>Notifications:</strong> Required by Android to display the
+            foreground service notification while a screen capture session is
+            active and while the Gemma 4 model is downloading.
+          </li>
+          <li>
+            <strong>Internet and network state:</strong> Used <strong>only</strong>
+            to download the Gemma 4 model file from Hugging Face Hub on first
+            launch. Once the file is downloaded, no further network traffic is
+            generated by Gemma Guard. The phishing analysis itself runs
+            entirely offline.
+          </li>
+          <li>
+            <strong>Foreground service (data sync):</strong> Required to keep
+            the one-time model download active when the app is backgrounded.
+          </li>
+          <li>
+            <strong>Foreground service (media projection):</strong> Required by
+            Android 14+ to perform screen capture in the background.
+          </li>
+        </ul>
+
+        <h2>Model download</h2>
+        <p>
+          On first launch, Gemma Guard downloads the Gemma 4 model file (~2 GB)
+          from Hugging Face Hub. The file is served from a public,
+          unauthenticated URL hosted by the <code>litert-community</code>
+          organization, the Google AI Edge team's community space on Hugging
+          Face Hub.
+        </p>
+        <p>
+          The download uses HTTPS. We (the Gemma Guard developers) do not
+          operate the hosting server and do not have access to download logs.
+          Hugging Face Hub, as the hosting infrastructure, may log connection
+          metadata in line with its own privacy policy
+          (<a href="https://huggingface.co/privacy" target="_blank" rel="noopener noreferrer">https://huggingface.co/privacy</a>).
+          After download completes, the file is verified by SHA-256 and stored
+          in private app storage. No further network traffic is generated.
+        </p>
+
+        <h2>Local data storage</h2>
+        <p>The following data is stored locally on your device only:</p>
+        <ul>
+          <li>The Gemma 4 model file (~2 GB) in the app's private storage.</li>
+          <li>A short scan history of up to 10 recent results.</li>
+          <li>
+            Temporary screenshot files used during sharing, deleted on a
+            best-effort basis when the app exits.
+          </li>
+        </ul>
+        <p>
+          This data is <strong>excluded from Android's Auto Backup</strong>, so
+          it is not transferred to your Google account or to a new device.
+          Uninstalling Gemma Guard removes all of it.
+        </p>
+
+        <h2>Third-party software</h2>
+        <p>
+          Gemma Guard uses the following components that run
+          <strong>on your device only</strong> and do not transmit data to
+          their authors:
+        </p>
+        <ul>
+          <li>Google AI Edge LiteRT-LM (model runtime)</li>
+          <li>Google ML Kit Text Recognition (on-device OCR)</li>
+          <li>Google Gemma 4 (the on-device language model)</li>
+          <li>OkHttp (one-time HTTPS download of the model from Hugging Face Hub)</li>
+        </ul>
+        <p>
+          These libraries operate locally. They do not phone home, send
+          analytics, or upload your screenshots.
+        </p>
+
+        <h2>Children's privacy</h2>
+        <p>
+          Gemma Guard is not directed to children under 13 and does not
+          knowingly collect data from anyone — children included.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          If we change this policy, we will update the "Last updated" date
+          above. Material changes will be reflected in the app's onboarding
+          flow on the next update.
+        </p>
+
+        <h2>Contact</h2>
+        <p>For questions about this policy:</p>
+        <ul>
+          <li>Pavel Kerbel — <a href="mailto:kerbelp@gmail.com">kerbelp@gmail.com</a></li>
+          <li>Milana Kerbel — <a href="mailto:milana159@gmail.com">milana159@gmail.com</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Gemma Guard</p>
+          <p class="footer-copy">
+            Android phishing detection powered by on-device Gemma 4, built for the Google
+            Gemma 4 Good Hackathon.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="https://github.com/GemmaGuard/gemma-guard-android" target="_blank" rel="noopener noreferrer">
+            Android repo
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
