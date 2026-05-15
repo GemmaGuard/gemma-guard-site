@@ -706,6 +706,21 @@ code {
   font-weight: 600;
 }
 
+.hackathon-points li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hackathon-points li:has(a):hover {
+  border-color: var(--brand, #0b6768);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.team-contact {
+  margin-top: 1.25rem;
+}
+
 .faq-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
