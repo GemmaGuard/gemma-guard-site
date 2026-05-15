@@ -105,5 +105,4 @@ next update.
 
 For questions about this policy:
 
-- Pavel Kerbel — kerbelp@gmail.com
-- Milana Kerbel — milana159@gmail.com
+- hello@gemmaguard.org
